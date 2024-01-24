@@ -54,6 +54,19 @@ button {
   text-align: center;
 }
 
+#search-button, #toggleButton {
+  background-color:#07211B;
+  border: none;
+  color: white;
+  transition: color 2s ease-in-out;
+}
+
+#search-button:hover, #toggleButton:hover {
+  background-color: #2E3190;
+  border-color: white;
+  color: white;
+}
+
 .matching-location, .matching-industry {
   text-align: center;
   background-color: transparent;
@@ -76,7 +89,7 @@ button {
 }
 
 .jobs-title {
-  color: white;
+  color: #07211B;
 }
 
 #jobs-subtitle {
@@ -84,12 +97,23 @@ button {
 }
 
 #job-results {
-    width: 90%;
+    width: 80%;
 }
 
 .job-result {
     background-color: #07211B;
     color: white;
+    border: solid 2px #B2E1D7;
+    text-align: center;
+    vertical-align: center;
+}
+
+.job-result:hover {
+  background-color: #B2E1D7;
+  color: #07211B;
+  border: solid 1px white;
+  text-align: center;
+  vertical-align: center;
 }
 
 #currency-convert-title {
@@ -101,8 +125,13 @@ button {
 }
 
 #converter-container {
-    background-color: white;
-    height: 20vw;
+  background-color: white;
+  height: 10vw;
+  transition: height 1.2s ease-in-out;
+}
+
+#converter-container:hover {
+  height: 20vw;
 }
 
 #baseCurrencyDropdown, #convertedCurrencyDropdown {
@@ -115,11 +144,10 @@ li {
    list-style-type: none; /* Remove default list item marker */
  }
 
- ul li, button{
-   margin-left: 5px; /* Adjust the padding as needed */
+ ul li {
+   margin-left: 5px;
    padding: 5px;
    text-indent: 15px; 
-
  }
  
 button img, .currency-flag-style {
@@ -142,11 +170,11 @@ button img, .currency-flag-style {
   margin-left: 10px;
 }
 
-#toggleButton{
+/* #toggleButton{
   align-self: center;
   margin: 5px;
   text-indent: 1px;
   padding: auto;
   border-radius: 50%;
-}
+} */
 

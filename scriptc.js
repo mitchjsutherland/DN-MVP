@@ -299,7 +299,7 @@ let annualSalaryMin = document.getElementById("job-salary-input").value;
               // jobElement.appendChild(jobDescriptionElement);
       
               const salaryElement = document.createElement('p');
-              salaryElement.innerText = `Salary: ${job.annualSalaryMin || 'Salary not available'}`;
+              salaryElement.innerText = `$${job.annualSalaryMin || 'Salary not available'}`;
               jobElement.appendChild(salaryElement);
       
               jobContainer.appendChild(jobElement);
