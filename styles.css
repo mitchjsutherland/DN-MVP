@@ -1,0 +1,103 @@
+#custom-nav {
+    background-color: #07211B;
+}
+
+body {
+    background-color: #B2E1D7;
+}
+
+#home-logo {
+    left: 10px;
+    width: 2vw;
+    height: 2vw;
+}
+
+#custom-jumbo {
+    background-color: white;
+    height: 10vw;
+}
+
+#header-container {
+    height: 20vw;
+}
+
+#search-container {
+    height: 30vw;
+    background-color: #B2E1D7;
+}
+
+.jobs-title {
+  color: white;
+}
+
+#jobs-subtitle {
+  color: black
+}
+
+#job-results {
+    width: 90%;
+}
+
+.job-result {
+    background-color: #07211B;
+    color: white;
+}
+
+#currency-convert-title {
+  color: #B2E1D7;
+}
+
+#currency-convert-subtitle {
+  color: #07211B;
+}
+
+#converter-container {
+    background-color: white;
+    height: 20vw;
+}
+
+#baseCurrencyDropdown, #convertedCurrencyDropdown {
+    height: 400px;
+    overflow: auto;
+}
+
+li {
+   position: relative;
+   list-style-type: none; /* Remove default list item marker */
+ }
+
+ ul li, button{
+   margin-left: 5px; /* Adjust the padding as needed */
+   padding: 5px;
+   text-indent: 15px; 
+
+ }
+ 
+ img {
+   position: absolute;
+   top: 50%; /* Adjust the positioning as needed */
+   left: 5px; /* Adjust the positioning as needed */
+   transform: translateY(-50%);
+   width: 20px; /* Adjust the size as needed */
+   height: 20px; /* Adjust the size as needed */
+   /* border-radius: 70%; Make the image circular */
+ }
+
+ button {
+  width: 125px; /* Set your desired width */
+  height: 40px; /* Set your desired height */
+}
+
+#baseCurrencyDropdown input, #convertedCurrencyDropdown input{
+  text-indent: 10px;
+  margin-left: 10px;
+}
+
+#toggleButton{
+  align-self: center;
+  margin: 5px;
+  text-indent: 1px;
+  padding: auto;
+  border-radius: 50%;
+}
+
