@@ -242,6 +242,8 @@ async function buildDropdown(dropdownElement, searchBar , currencies){
 
     listItem.appendChild(flagImage);
 
+    flagImage.classList.add('currency-flag-style');
+
     //more flexible way of adding text to a container with img element
 
     //listItem.appendChild(document.createTextNode(`${currencyCode} ${currencyName}`)); 

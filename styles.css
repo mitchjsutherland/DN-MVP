@@ -73,7 +73,7 @@ li {
 
  }
  
- img {
+button img, .currency-flag-style {
    position: absolute;
    top: 50%; /* Adjust the positioning as needed */
    left: 5px; /* Adjust the positioning as needed */
