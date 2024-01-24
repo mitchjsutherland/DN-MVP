@@ -48,7 +48,7 @@ body {
 #custom-jumbo {
   height: 48vw;
   background-color: white;
-  animation: colorChange 20s infinite; /* Specify the animation name, duration, and iteration count */
+  animation: colorChange 9s infinite;
 }
 
 @keyframes colorChange {
@@ -59,9 +59,22 @@ body {
   100% { background-color: white; }
 }
 
-#search-container {
-  height: 30vw;
-  width: 70vw;
+#header-motto {
+  color: black;
+  animation: colorChange2 9s infinite; 
+}
+
+@keyframes colorChange2 {
+  0% {  color: black }
+  25% { color: black }
+  50% { color:  white }
+  75% { color: black}
+  100% { color: black; }
+}
+
+#search-container, #results-container {
+  height: 48vw;
+  width: 100vw;
 }
 
 button {
@@ -79,6 +92,11 @@ button {
   background-color: #2E3190;
   border-color: white;
   color: white;
+}
+
+#search-button a {
+  color: white;
+  text-decoration: none;
 }
 
 .matching-location, .matching-industry {
@@ -182,6 +200,10 @@ button img, .currency-flag-style {
 #baseCurrencyDropdown input, #convertedCurrencyDropdown input{
   text-indent: 10px;
   margin-left: 10px;
+}
+
+#footer-container {
+
 }
 
 /* #toggleButton{

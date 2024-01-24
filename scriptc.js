@@ -100,14 +100,7 @@ let annualSalaryMin = document.getElementById("job-salary-input").value;
     
       populateCountryDropdown();
     
-      document.getElementById('search-input').addEventListener('input', async function (event) {
-        event.preventDefault();
-        const selectedCountry = getSelectedCountry();
-        const matchingLocations = locations.filter(location =>
-          location.geoName.toLowerCase().includes(selectedCountry.toLowerCase())
-        );
-        displayMatchingLocations(matchingLocations);
-      });
+
     
       // Define the job industries array
       const jobIndustries = [
@@ -150,25 +143,12 @@ let annualSalaryMin = document.getElementById("job-salary-input").value;
               industryInput.value = industry.industryName;
               // Clear the matching industries container
               industriesContainer.innerHTML = '';
-      
-              // Call submitSearch after updating the industry
-              submitSearch();
+
             });
             industriesContainer.appendChild(industryButton);
           });
         }
       
-        document.getElementById('job-description-input').addEventListener('input', async function (event) {
-          event.preventDefault();
-      
-          const selectedIndustry = getSelectedIndustry();
-          const matchingIndustries = jobIndustries.filter(industry =>
-            industry.industryName.toLowerCase().includes(selectedIndustry.toLowerCase())
-          );
-          displayMatchingIndustries(matchingIndustries);
-      
-          await submitSearch();
-        });
       
         async function combinedJobSearch(countryName, industryName, annualSalaryMin) {
           try {
@@ -310,10 +290,6 @@ let annualSalaryMin = document.getElementById("job-salary-input").value;
         }
 
 
-
-
-
-      
         function stripHtml(html) {
           const doc = new DOMParser().parseFromString(html, 'text/html');
           return doc.body.textContent || '';
@@ -330,23 +306,27 @@ let annualSalaryMin = document.getElementById("job-salary-input").value;
           const countryInput = getSelectedCountry();
           const jobIndustry = getSelectedIndustry(); // Get the selected industry
       
-        //   localStorage.setItem('Country', countryInput);
+          //   localStorage.setItem('Country', countryInput);
 
-
-        // THIS WILL SAVE THE USERS MOST RECENT SEARCH TO LOCAL STORAGE -------------------------------------------------------------------
+          // THIS WILL SAVE THE USERS MOST RECENT SEARCH TO LOCAL STORAGE -------------------------------------------------------------------
 
           var country = document.getElementById('search-input').value;
+          var industry = document.getElementById('job-description-input').value;
           var salary = document.getElementById('job-salary-input').value;
 
           // Create an object with country and salary properties
           var userPreferences = {
             country: country,
+            industry: industry,
             salary: salary
           };
 
+          setLocalStorage(userPreferences);
+
           // Convert the object to a JSON string and save it to local storage
-          localStorage.setItem('userPreferences', JSON.stringify(userPreferences));
-      
+
+          // localStorage.setItem('userPreferences', JSON.stringify(userPreferences));
+
           try {
             const jobs = await combinedJobSearch(countryInput, jobIndustry, annualSalaryMin);
             createCurrentDataElement(countryInput, jobs);
@@ -354,6 +334,20 @@ let annualSalaryMin = document.getElementById("job-salary-input").value;
             console.error('Error:', error);
           }
         }
+
+        // NEW FUNCTION FOR SAVING TO LOCAL STORAGE ----------------------------------
+
+        function setLocalStorage(userPreferences) {
+          let searchHistoryArray = getLocalStorage();
+          searchHistoryArray.push(userPreferences);
+          localStorage.setItem('searchHistory',JSON.stringify(searchHistoryArray));
+        }
+      
+        function getLocalStorage(){
+          const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+          return searchHistory;
+        }
+
       
         document.getElementById('search-button').addEventListener('click', async function (event) {
           event.preventDefault();
@@ -378,6 +372,6 @@ let annualSalaryMin = document.getElementById("job-salary-input").value;
           );
           displayMatchingIndustries(matchingIndustries);
       
-          await submitSearch();
+          // await submitSearch();
         });
     //   });

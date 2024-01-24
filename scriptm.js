@@ -14,5 +14,47 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Call the function to start the animation sequence
-    setTimeout(showPageLoad, 2500); // Wait for 3 seconds for the overview container to blend out
+    setTimeout(showPageLoad, 1500); // Wait for 3 seconds for the overview container to blend out
+});
+
+// $(document).ready(function () {
+//     // Add click event listener to the button
+//     $("#search-button").click(function (e) {
+//         // Prevent the default form submission
+//         e.preventDefault();
+
+//         // Scroll to the results container
+//         $("html, body").animate({
+//             scrollTop: $("#results-container").offset().top
+//         }, 1000); // Adjust the duration as needed
+//     });
+// });
+
+
+// let searchButton = document.getElementById('search-button')
+
+// addEventListener('click', function() {
+//     function scrollToResults() {
+
+//     }
+// })
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the button element
+    var searchButton = document.getElementById('search-button');
+
+    // Add click event listener to the button
+    searchButton.addEventListener('click', function (e) {
+        // Prevent the default form submission
+        e.preventDefault();
+
+        // Get the offset top of the results container
+        var resultsContainerOffset = document.getElementById('results-container').offsetTop;
+
+        // Scroll to the results container
+        window.scrollTo({
+            top: resultsContainerOffset,
+            behavior: 'smooth'
+        });
+    });
 });
