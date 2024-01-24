@@ -1,17 +1,38 @@
-#matching-locations {
+/* #matching-locations {
     position: absolute;
     width: 100%;
     max-height: 150px; /* Adjust the maximum height as needed */
     overflow-y: auto;
-    border: 1px solid #ccc;
+    border: none;
+    z-index: 1;
+    background-color: none;
+} */
+
+.matching-location, .matching-industry {
+    background-color: none;
+    color: none;
+    border: none;
+    position: absolute;
+    width: 100%;
+    max-height: 150px; /* Adjust the maximum height as needed */
+    overflow-y: auto;
     z-index: 1;
 }
 
-#matching-locations div {
+#matching-locations-container {
+    height: 5vw;
+    overflow-y: scroll;
+}
+
+#matching-locations {
+
+}
+
+/* #matching-locations div {
     padding: 10px;
     cursor: pointer;
     background-color: #f9f9f9;
-}
+} */
 
 #search-input {
     position: relative;

@@ -50,6 +50,31 @@ body {
     width: 70vw;
 }
 
+button {
+  text-align: center;
+}
+
+.matching-location, .matching-industry {
+  text-align: center;
+  background-color: transparent;
+  color: #07211B;
+  border: none;
+  max-height: 150px; /* Adjust the maximum height as needed */
+  overflow-y: auto;
+  z-index: 1;
+  font-size: 70%;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+}
+
+.matching-location:hover, .matching-industry:hover {
+  background-color: #07211B;
+  color: white;
+}
+
+#matching-locations {
+  overflow-y: scroll;
+}
+
 .jobs-title {
   color: white;
 }
