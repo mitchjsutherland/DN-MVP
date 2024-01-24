@@ -6,227 +6,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Nomad</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">;
+    <link rel="stylesheet" href="styles.css">
 </head>
 
+
+
 <body>
+    <div class="container d-flex align-items-center justify-content-center" id="overview-container">
+        <img src="Digital Nomad Logo-pageload.png" id="pageload-logo" alt="Brand Logo" style="max-width: 100%" />
+    </div>
 
-    <nav class="navbar navbar-dark fixed-top" id="custom-nav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="Digital Nomad White Icon.png" id="home-logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Link *not currently required*</a>
-                        <h5>Quick search:</h5>
-                    </li> -->         
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="country-list-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Select a country
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" id="country-list" >
-                            <li><a class="dropdown-item" href="#">Anywhere</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Country 1</a></li>
-                            <li><a class="dropdown-item" href="#">Country 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="job-list-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Job type
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" id="job-list">
-                            <li><a class="dropdown-item" href="#">Any</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Job type 1</a></li>
-                            <li><a class="dropdown-item" href="#">Job type 2</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Minimum Salary
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="#">Any</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Amount 1</a></li>
-                            <li><a class="dropdown-item" href="#">Amount 2</a></li>
-                        </ul>
-                    </li>
-              </ul>
-
-              <form class="d-flex mt-3" role="search">
-                    <!-- <input class="form-control me-2" type="type" placeholder="Search" aria-label="Search"> -->
-                    <button class="btn btn-success" type="submit">Search</button>
-              </form>
-
-              <div class="container mt-5" id="previous-search-container">
-                <div class="div">
-                    <p>Previous searches</p>
+    <div class="div" id="main-page">
+        <nav class="navbar navbar-dark fixed-top" id="custom-nav">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="Digital Nomad White Icon.png" id="home-logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <div class="card" id="previous-search-card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Saved country</h5>
-                      <p class="card-text">Saved minimum salary</p>
-                      <a href="#" class="btn btn-primary">Resubmit search</a>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Link *not currently required*</a>
+                            <h5>Quick search:</h5>
+                        </li> -->         
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="country-list-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Select a country
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" id="country-list" >
+                                <li><a class="dropdown-item" href="#">Anywhere</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Country 1</a></li>
+                                <li><a class="dropdown-item" href="#">Country 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="job-list-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Job type
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" id="job-list">
+                                <li><a class="dropdown-item" href="#">Any</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Job type 1</a></li>
+                                <li><a class="dropdown-item" href="#">Job type 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Minimum Salary
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Any</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Amount 1</a></li>
+                                <li><a class="dropdown-item" href="#">Amount 2</a></li>
+                            </ul>
+                        </li>
+                  </ul>
+    
+                  <form class="d-flex mt-3" role="search">
+                        <!-- <input class="form-control me-2" type="type" placeholder="Search" aria-label="Search"> -->
+                        <button class="btn btn-success" type="submit">Search</button>
+                  </form>
+    
+                  <div class="container mt-5" id="previous-search-container">
+                    <div class="div">
+                        <p>Previous searches</p>
                     </div>
+                    <div class="card" id="previous-search-card" style="width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title">Saved country</h5>
+                          <p class="card-text">Saved minimum salary</p>
+                          <a href="#" class="btn btn-primary">Resubmit search</a>
+                        </div>
+                      </div>
                   </div>
-              </div>
-              </div>
-              
-
-
-            </div>
-          </div>
-        </div>
-    </nav>
-
-
-    <!-- Left side bar (Can be available for Aijamal to add content if required)-->
-
-
-
-    <!-- Header section -->
-
-    <div class="jumbotron-fluid d-flex justify-content-center align-items-center mt-5" id="custom-jumbo">
-        <div class="col d-flex justify-content-center">
-            <div class="row col-6 text-center" id="header-logo-wrapper">
-                <!-- <img src="Digital Nomad Colour.png" id="header-logo"> -->
-                <h1>DIGITAL NOMAD</h1>
-                <h5>Work anywhere. Live everywhere.</h5>
-            </div>
-        </div>
-    </div> 
-
-
-    <!-- CAT'S CODE // Search container -->
-
-    <div class="container d-flex align-items-center" id="search-container">
-        <div class="container mt-3">
-            <form id="search-form">
-                <label for="search-input" class="form-label">Where do you want to go?</label>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="search-input" placeholder="Select country" aria-describedby="search-button">
-                </div>
-
-                <div id="matching-locations-container">
-                    <div id="matching-locations"></div>
-                </div>
+                  </div>
+                  
     
-                <div id="job-description" class="mt-3">
-                    <label for="job-description-input" class="form-label">What job are you seeking?</label>
+    
+                </div>
+            </div>
+        </nav>
+    
+    
+        <!-- Left side bar (Can be available for Aijamal to add content if required)-->
+    
+    
+    
+        <!-- Header section -->
+    
+        <div class="jumbotron-fluid d-flex justify-content-center align-items-center mt-5" id="custom-jumbo">
+            <div class="col d-flex justify-content-center">
+                <div class="row col-6 justify-content-center text-center" id="header-logo-wrapper">
+                    <img src="Digital Nomad Colour.png" id="header-logo">
+                    <h5>Work anywhere. Live everywhere.</h5>
+                </div>
+            </div>
+        </div> 
+    
+        <!-- CAT'S CODE // Search container -->
+    
+        <div class="container d-flex align-items-center" id="search-container">
+            <div class="container mt-3">
+                <form id="search-form">
+                    <label for="search-input" class="form-label">Where do you want to go?</label>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="job-description-input" name="jobIndustry" placeholder="Enter job description">
+                        <input type="text" class="form-control" id="search-input" placeholder="Select country" aria-describedby="search-button">
                     </div>
-                </div>
-
-                <div id="matching-industries" class="matching-container"></div>
     
-                <div id="job-salary" class="mt-3">
-                    <label for="job-salary-input" class="form-label">What is your minimum salary requirement?</label>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="job-salary-input" placeholder="Enter job salary">
+                    <div id="matching-locations-container">
+                        <div id="matching-locations"></div>
                     </div>
-                </div>
-
-                <button class="btn btn-primary" type="submit" id="search-button">Search</button>
-
-            </form>
-        </div>
-    </div>
-
-    <div id="overview-container"></div>
-
-    <div class="container">
-        <div class="row justify-content-center text-center" id="jobs-container-header">
-            <div class="col-8 m-4 jobs-title">
-                <h1>Are you ready to go?</h1>
-                <h6 id="jobs-subtitle">Discover your next nomad experience in <span>USER COUNTRY INPUT</span> here:</h6>
+        
+                    <div id="job-description" class="mt-3">
+                        <label for="job-description-input" class="form-label">What job are you seeking?</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="job-description-input" name="jobIndustry" placeholder="Enter job description">
+                        </div>
+                    </div>
+    
+                    <div id="matching-industries" class="matching-container"></div>
+        
+                    <div id="job-salary" class="mt-3">
+                        <label for="job-salary-input" class="form-label">What is your minimum salary requirement?</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="job-salary-input" placeholder="Enter job salary">
+                        </div>
+                    </div>
+    
+                    <button class="btn btn-primary" type="submit" id="search-button">Search</button>
+    
+                </form>
             </div>
         </div>
     
-        <div class="container d-flex col-12 justify-content-center mb-5">
-            <div class="container row col-12 d-flex justify-content-center" id="job-results">
-                <!-- DYNAMIC CARDS WILL LOAD HERE FROM SCRIPTC LINE 273 -->
+        <div id="country-container"></div>
+    
+        <div class="container">
+            <div class="row justify-content-center text-center" id="jobs-container-header">
+                <div class="col-8 m-4 jobs-title">
+                    <h1>Are you ready to go?</h1>
+                    <h6 id="jobs-subtitle">Discover your next nomad experience in <span>USER COUNTRY INPUT</span> here:</h6>
+                </div>
+            </div>
+        
+            <div class="container d-flex col-12 justify-content-center mb-5">
+                <div class="container row col-12 d-flex justify-content-center" id="job-results">
+                    <!-- DYNAMIC CARDS WILL LOAD HERE FROM SCRIPTC LINE 273 -->
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- FILIP'S CODE // Currency Converter -->
+    
+        <div class="container d-flex align-items-center" id="converter-container">
+            <div class="col-4 p-5 justify-content-center text-center">
+                <h1 id="currency-convert-title">Currency Conversion</h1>
+                <h6 id="currency-convert-subtitle">Navigate the world of foreign currency exhange with the Digital Nomad converter</h6>
+            </div>
+            <div class="col">
+                <form class="col-12" id="currencyConverterForm">
+                    <div class="form-row">
+                        <!-- Base Currency Input -->
+                            <div class="form-group col-md-10">
+                                <label for="baseCurrencyInput">Base Currency:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="baseCurrencyButton">
+                                            <img src="https://via.placeholder.com/30" alt="Country Flag" class="img-fluid rounded-circle mr-2 currency-flag" id="baseCurrencyImg">
+                                            <span id="baseCurrencyCode">GBP</span>
+                                        </button>
+                                        <ul class="dropdown-menu" id="baseCurrencyDropdown" aria-labelledby="baseCurrencyDropdownButton">
+                                            <!-- Dropdown items will be dynamically added here -->
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" id="baseCurrencyInput" placeholder="Enter base currency" maxlength="20">
+                                </div>
+                            </div>
+        
+                            <button class="btn btn-primary" type="button" id="toggleButton">Toggle</button>
+        
+                            <!-- Converted Currency Input -->
+                            <div class="form-group col-md-10">
+                                <label for="convertedCurrencyInput">Converted Currency:</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="convertedCurrencyButton">
+                                            <img src="https://via.placeholder.com/30" alt="Country Flag" class="img-fluid rounded-circle mr-2 currency-flag" id="convertedCurrencyImg">
+                                            <span id="convertedCurrencyCode">USD</span>
+                                        </button>
+                                        <ul class="dropdown-menu" id="convertedCurrencyDropdown" aria-labelledby="convertedCurrencyDropdownButton">
+                                            <!-- Dropdown items will be dynamically added here -->
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" id="convertedCurrencyInput" placeholder="Converted currency will appear here" maxlength="20">
+                                </div>
+                            </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
 
-    <!-- FILIP'S CODE // Currency Converter -->
 
-    <div class="container d-flex align-items-center" id="converter-container">
-        <div class="col-4 p-5 justify-content-center text-center">
-            <h1 id="currency-convert-title">Currency Conversion</h1>
-            <h6 id="currency-convert-subtitle">Navigate the world of foreign currency exhange with the Digital Nomad converter</h6>
-        </div>
-        <div class="col">
-            <form class="col-12" id="currencyConverterForm">
-                <div class="form-row">
-                    <!-- Base Currency Input -->
-                        <div class="form-group col-md-10">
-                            <label for="baseCurrencyInput">Base Currency:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="baseCurrencyButton">
-                                        <img src="https://via.placeholder.com/30" alt="Country Flag" class="img-fluid rounded-circle mr-2 currency-flag" id="baseCurrencyImg">
-                                        <span id="baseCurrencyCode">GBP</span>
-                                    </button>
-                                    <ul class="dropdown-menu" id="baseCurrencyDropdown" aria-labelledby="baseCurrencyDropdownButton">
-                                        <!-- Dropdown items will be dynamically added here -->
-                                    </ul>
-                                </div>
-                                <input type="text" class="form-control" id="baseCurrencyInput" placeholder="Enter base currency" maxlength="20">
-                            </div>
-                        </div>
-    
-                        <button class="btn btn-primary" type="button" id="toggleButton">Toggle</button>
-    
-                        <!-- Converted Currency Input -->
-                        <div class="form-group col-md-10">
-                            <label for="convertedCurrencyInput">Converted Currency:</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="convertedCurrencyButton">
-                                        <img src="https://via.placeholder.com/30" alt="Country Flag" class="img-fluid rounded-circle mr-2 currency-flag" id="convertedCurrencyImg">
-                                        <span id="convertedCurrencyCode">USD</span>
-                                    </button>
-                                    <ul class="dropdown-menu" id="convertedCurrencyDropdown" aria-labelledby="convertedCurrencyDropdownButton">
-                                        <!-- Dropdown items will be dynamically added here -->
-                                    </ul>
-                                </div>
-                                <input type="text" class="form-control" id="convertedCurrencyInput" placeholder="Converted currency will appear here" maxlength="20">
-                            </div>
-                        </div>
-                </div>
-            </form>
-        </div>
-    </div>
+
 
 
     <!-- AIJAMAL'S CODE -->
 
     <div id="map"></div>
 
-
     <script src="scripta.css"></script>
+
+
+    <!-- MITCH'S SCRIPT -->
+
+    <script src="scriptm.js"></script>
 
 
     <!-- FILIP'S SCRIPT  -->

@@ -3,7 +3,35 @@
 }
 
 body {
-    background-color: #B2E1D7;
+    background-color: white;
+}
+
+#main-page {
+  display: none;
+  background-color:#B2E1D7;
+}
+
+/* Animation class for fading in */
+.fade-in {
+  opacity: 1 !important;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Animation class for fading out */
+.fade-out {
+  opacity: 0 !important;
+  transition: opacity 2s ease-in-out;
+}
+
+
+#overview-container {
+  height: 50vw;
+  width: 50vw;
+  margin: auto;
+}
+
+#pageload-logo {
+  width: 20vw;
 }
 
 #home-logo {
@@ -14,16 +42,12 @@ body {
 
 #custom-jumbo {
     background-color: white;
-    height: 10vw;
-}
-
-#header-container {
-    height: 20vw;
+    height: 15vw;
 }
 
 #search-container {
     height: 30vw;
-    background-color: #B2E1D7;
+    width: 70vw;
 }
 
 .jobs-title {
