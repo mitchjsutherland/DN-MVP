@@ -40,14 +40,28 @@ body {
     height: 2vw;
 }
 
-#custom-jumbo {
+/* #custom-jumbo {
     background-color: white;
-    height: 15vw;
+    height: 48vw;
+  } */
+
+#custom-jumbo {
+  height: 48vw;
+  background-color: white;
+  animation: colorChange 20s infinite; /* Specify the animation name, duration, and iteration count */
+}
+
+@keyframes colorChange {
+  0% { background-color: white; }
+  25% { background-color: white }
+  50% { background-color:  #07211B; }
+  75% { background-color: white }
+  100% { background-color: white; }
 }
 
 #search-container {
-    height: 30vw;
-    width: 70vw;
+  height: 30vw;
+  width: 70vw;
 }
 
 button {
